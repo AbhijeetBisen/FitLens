@@ -9,9 +9,9 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "node ./node_modules/vite/bin/vite.js build",
-    "vercel-build": "node ./node_modules/vite/bin/vite.js build",
-    "preview": "vite preview"
+    "build": "npx vite build",
+    "vercel-build": "npm run build",
+    "preview": "npx vite preview"
   },
   "dependencies": {
     "chart.js": "^4.5.0",
