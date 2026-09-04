@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
 import AppLayout from './components/AppLayout.jsx';
 import { calculateOneRepMax, calculateVolume } from './utils/strength.js';
 import {
@@ -467,7 +467,7 @@ export default function App() {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route element={<AppLayout />}>
           <Route path="/" element={<Navigate to="/overview" replace />} />
@@ -524,6 +524,6 @@ export default function App() {
           <Route path="*" element={<Navigate to="/overview" replace />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
